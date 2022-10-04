@@ -10,6 +10,7 @@
    
     $bg-pro: #F5F5F5;
     $bg-card:#F8F8F8;
+    $bg-button:  #E1B067;
     $co-title:black;
     $co-text: #CBC9C9;;
 
@@ -24,6 +25,7 @@ $fs-style: normal;
 
 
 // FONT-WEIGHT
+$fw-200: 200;
 $fw-300: 300;
 $fw-400: 400;
 $fw-600: 600;
@@ -41,11 +43,10 @@ body {
 }
 
     //FONT MIXIN
-    @mixin font-set($size, $weight, $style) {
+    @mixin font-set($size, $weight) {
         font: {
             size: $size;
             weight: $weight;
-            style: $style;
         }
     }
 
@@ -67,13 +68,15 @@ body {
             top: 45px;
             }
             .card-title {
-                @include font-set($fs-mid, $fw-300, $fs-style);
+                @include font-set($fs-mid, $fw-300);
+                font-style: $fs-style;
                 color: $co-title;
                 line-height: 29px;
             }
             .card-text,
             p {
-                @include font-set($fs-small, $fw-300, $fs-style);
+                @include font-set($fs-small, $fw-300);
+                font-style: $fs-style;
                 color: $co-text;
                 line-height: 24px;
             }                           
@@ -82,6 +85,20 @@ body {
             }
             img:hover {
                 transform: scale(103%);
+            }
+            .card-button {
+                display: inline;
+                width: 109px;
+                height: 29px;
+                left: 39px;
+                top: 322px;
+                .btn {
+                @include font-set($fs-small, $fw-200);
+                color: $co-title;
+                background-color: $bg-button;
+                font-style: $fs-style;
+                line-height: 29px;
+                }
             }
         }
         .card:hover {
