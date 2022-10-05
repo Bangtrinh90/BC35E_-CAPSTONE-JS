@@ -156,13 +156,11 @@ body {
   left: 0;
 }
 .register .container .itemGender {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.register .container .itemGender .gender-title-text {
   color: black;
   font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .register .container .reg-button {
   padding: 6px 70px;
