@@ -1,0 +1,21 @@
+//GLOBAL
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.wrapper {
+    max-width: 100%;
+}
+
+body {
+    font-family: $font;
+    line-height: $lh-29;
+    color: $text-color;
+    font-weight: $fw-300;
+    
+}
+
+//2 bên nó tràn ra hết ko dc để max-width

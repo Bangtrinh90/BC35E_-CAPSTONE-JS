@@ -1,0 +1,82 @@
+//FONT MIXIN
+@mixin font-set($size, $weight, $line-height) {
+    font: {
+        size: $size;
+        weight: $weight;
+        line-height: $line-height;
+    }
+}
+
+.register {
+    .container {
+        width: 80%;
+        margin: auto;
+        .regTitle {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 600px) {
+            width: 100%;
+        }
+        .regInner {
+            width: 100%;
+            display: flex;
+            
+            @media (max-width: 600px) {
+                flex-direction: column;
+            }
+            
+            .regItem {
+                width: 50%;
+                padding: 0 50px;
+                @media (max-width: 600px) {
+                    width: 100%;
+                }
+                .itemInner {
+                    position: relative;
+                    display: flex;
+                    margin-bottom: 25px;
+                    input {
+                        flex: 90%;
+                        border: none;
+                        height: 36px;
+                        &::placeholder {
+                            color: $text-color;
+                            font-size: $fs-mid;
+                        }
+                    }
+                    .inputAlert {
+                        flex: 10%;
+                        justify-self: flex-end;
+                        color: red;
+                        text-align: right;
+                    }
+                    &::after {
+                        position:absolute;
+                        display: block;
+                        content: "";
+                        width: 100%;
+                        height: 6px;
+                        background-image: $mautim;
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+            }
+        }
+        .itemGender {
+            color: $text-color;
+            font-size: $fs-mid;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+                        
+        }
+    }
+        .reg-button{
+            padding: 6px 70px;
+            background-color: $purple-btn;
+            color: $bg-register;
+        }
+    }    
+}

@@ -1,3 +1,25 @@
+input {
+  line-height: normal;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -5,68 +27,145 @@
   outline: none;
 }
 
-body {
-  background-color: #F5F5F5;
-  line-height: 1.8rem;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
+.wrapper {
+  max-width: 100%;
 }
 
-.pro-feature {
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 29px;
+  color: black;
+  font-weight: 300;
+}
+
+.top-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 9px 0 3px 25px;
+}
+.top-header-auth {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  margin-right: 20px;
+  gap: 0 30px;
+}
+.top-header-auth a {
+  color: #F6F6F6;
+  text-decoration: none;
+}
+.top-header-auth .span {
+  display: inline-block;
+}
+
+.header {
+  padding: 15px 0 3px 38px;
+}
+.header-menu .menu {
+  display: flex;
+  align-items: center;
+  gap: 0 30px;
+}
+.header-menu .menu .menu-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer {
+  margin-top: 100px;
+}
+.footer-img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carousel {
   position: relative;
-  background-color: #F5F5F5;
 }
-.pro-feature .card {
-  position: absolute;
-  width: 334px;
-  height: 369px;
-  left: 99px;
-  top: 153px;
-  background-color: #F8F8F8;
+
+.register .container {
+  width: 80%;
+  margin: auto;
 }
-.pro-feature .card .card-img-top {
-  width: 220px;
-  height: 156px;
-  left: 57px;
-  top: 45px;
+.register .container .regTitle {
+  text-align: center;
+  margin-bottom: 30px;
 }
-.pro-feature .card .card-title {
+@media (max-width: 600px) {
+  .register .container {
+    width: 100%;
+  }
+}
+.register .container .regInner {
+  width: 100%;
+  display: flex;
+}
+@media (max-width: 600px) {
+  .register .container .regInner {
+    flex-direction: column;
+  }
+}
+.register .container .regInner .regItem {
+  width: 50%;
+  padding: 0 50px;
+}
+@media (max-width: 600px) {
+  .register .container .regInner .regItem {
+    width: 100%;
+  }
+}
+.register .container .regInner .regItem .itemInner {
+  position: relative;
+  display: flex;
+  margin-bottom: 25px;
+}
+.register .container .regInner .regItem .itemInner input {
+  flex: 90%;
+  border: none;
+  height: 36px;
+}
+.register .container .regInner .regItem .itemInner input::-moz-placeholder {
+  color: black;
   font-size: 24px;
-  font-weight: 300;
-  font-style: normal;
+}
+.register .container .regInner .regItem .itemInner input:-ms-input-placeholder {
   color: black;
-  line-height: 29px;
+  font-size: 24px;
 }
-.pro-feature .card .card-text,
-.pro-feature .card p {
-  font-size: 20px;
-  font-weight: 300;
-  font-style: normal;
-  color: #CBC9C9;
-  line-height: 24px;
-}
-.pro-feature .card img {
-  transition: all 1s;
-}
-.pro-feature .card img:hover {
-  transform: scale(103%);
-}
-.pro-feature .card .card-button {
-  display: inline;
-  width: 109px;
-  height: 29px;
-  left: 39px;
-  top: 322px;
-}
-.pro-feature .card .card-button .btn {
-  font-size: 20px;
-  font-weight: 200;
+.register .container .regInner .regItem .itemInner input::placeholder {
   color: black;
-  background-color: #E1B067;
-  font-style: normal;
-  line-height: 29px;
+  font-size: 24px;
 }
-.pro-feature .card:hover {
-  box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.1);
+.register .container .regInner .regItem .itemInner .inputAlert {
+  flex: 10%;
+  justify-self: flex-end;
+  color: red;
+  text-align: right;
+}
+.register .container .regInner .regItem .itemInner::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 6px;
+  background-image: linear-gradient(180deg, #AE18E2 0%, rgba(0, 0, 0, 0) 100%);
+  bottom: 0;
+  left: 0;
+}
+.register .container .itemGender {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register .container .itemGender .gender-title-text {
+  color: black;
+  font-size: 24px;
+}
+.register .container .reg-button {
+  padding: 6px 70px;
+  background-color: #AE18E2;
+  color: #FFFCFC;
 }/*# sourceMappingURL=style.css.map */

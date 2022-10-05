@@ -1,0 +1,57 @@
+.top-header{
+    &-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $text-color;
+    padding: 9px 0 3px 25px;
+    }
+    &-auth{
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+        margin-right: 20px;
+        gap: 0 30px;
+        a {
+        color: $auth-color;
+        text-decoration: none;
+        }
+        .span{
+            display: inline-block;
+        }
+    }
+}
+
+.header{
+    padding: 15px 0 3px 38px;
+    &-menu{
+        .menu{
+        display: flex;
+        align-items: center;
+        gap: 0 30px;        
+        .menu-item {
+            a {
+                text-decoration: none;
+                color: $text-color;
+            }
+        }
+        }
+    }
+}
+
+.footer{
+    margin-top: 100px;
+    &-img img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+
+   
+    
+    
+    
+    
+    
+

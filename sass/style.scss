@@ -1,109 +1,82 @@
-//GLOBAL
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    outline: none;
-}
-
-//COLOR
-   
-    $bg-pro: #F5F5F5;
-    $bg-card:#F8F8F8;
-    $bg-button:  #E1B067;
-    $co-title:black;
-    $co-text: #CBC9C9;;
-
-//FONT SIZE
-$fs-normal: 16px;
-$fs-small: 20px;
-$fs-mid: 24px;
+@import "./reset";
+@import "./variables";
+@import "./global";
+@import "./header";
+@import "./product_list";
+@import "./details_product";
+@import "./register";
 
 
-//FONT STYLE
-$fs-style: normal;
-
-
-// FONT-WEIGHT
-$fw-200: 200;
-$fw-300: 300;
-$fw-400: 400;
-$fw-600: 600;
-$fw-700: 700;
-$fw-800: 800;
-
-body {
-    background-color: $bg-pro;
-    line-height: 1.8rem;
-    font: {
-        family: 'Inter', sans-serif;
-        weight: $fw-400;
-        size: $fs-normal;
-    }
-}
 
     //FONT MIXIN
-    @mixin font-set($size, $weight) {
+    @mixin font-set($size, $weight, $line-height) {
         font: {
             size: $size;
             weight: $weight;
+            line-height: $line-height;
         }
     }
 
-    //PRODUCT LIST
-    .pro-feature {
-        position: relative;
-        background-color: $bg-pro;
-        .card {
-            position: absolute;
-            width: 334px;
-            height: 369px;
-            left: 99px;
-            top: 153px;
-            background-color: $bg-card;
-            .card-img-top{
-            width: 220px;
-            height: 156px;
-            left: 57px;
-            top: 45px;
-            }
-            .card-title {
-                @include font-set($fs-mid, $fw-300);
-                font-style: $fs-style;
-                color: $co-title;
-                line-height: 29px;
-            }
-            .card-text,
-            p {
-                @include font-set($fs-small, $fw-300);
-                font-style: $fs-style;
-                color: $co-text;
-                line-height: 24px;
-            }                           
-            img {
-                transition: all 1s;
-            }
-            img:hover {
-                transform: scale(103%);
-            }
-            .card-button {
-                display: inline;
-                width: 109px;
-                height: 29px;
-                left: 39px;
-                top: 322px;
-                .btn {
-                @include font-set($fs-small, $fw-200);
-                color: $co-title;
-                background-color: $bg-button;
-                font-style: $fs-style;
-                line-height: 29px;
-                }
-            }
-        }
-        .card:hover {
-            box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, .1);
-        }
-    }
+    // //NAV BAR
+    // nav.navbar {
+    //     padding: 2.5rem 0;
+    //     position: relative;
+    //     justify-content: space-between;
+    //     z-index: 1;
+    //     .nav-list a {
+    //         display: inline-block;
+    //         padding: 1rem;
+    //         @include font-set($fs-small, $fw-400, $lh-24);
+    //         font-style: normal;
+    //         color: $text-color;
+    //         padding-top: 16px;
+    //         padding-left: 25px;
+    //     }
+    // }
+
+    // //PRODUCT LIST
+    // .pro-feature {
+    //     position: relative;
+    //     background-color: $bg-pro;
+    //     .card {
+    //         position: absolute;
+    //         background-color: $bg-card;
+    //         .card-img-top{
+    //         }
+    //         .card-title {
+    //             @include font-set($fs-mid, $fw-300, $lh-29);
+    //             font-style: $fs-style;
+    //             color: $text-color;
+    //         }
+    //         .card-text,
+    //         p {
+    //             @include font-set($fs-small, $fw-300, $lh-24);
+    //             font-style: $fs-style;
+    //             color: $des-color;
+    //         }                           
+    //         img {
+    //             transition: all 1s;
+    //         }
+    //         img:hover {
+    //             transform: scale(103%);
+    //         }
+    //         .card-button {
+    //             display: inline-block;
+    //             text-align: center;
+    //             .btn {
+    //             @include font-set($fs-normal, $fw-200, $lh-29);
+    //             color: $text-color !important;
+    //             background-color: $bg-button;
+    //             font-style: $fs-style;
+    //             }
+    //             .span {
+    //             background-color: $bg-span !important;
+    //             }
+    //         }
+    //     }
+    //     .card:hover {
+    //         box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, .1);
+    //     }
+    // }
     
     
