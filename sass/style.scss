@@ -2,9 +2,9 @@
 @import "./variables";
 @import "./global";
 @import "./header";
-@import "./product_list";
-@import "./details_product";
-@import "./register";
+@import "./_product_list";
+@import "./_details_product";
+@import "./_register";
 
 
 
@@ -17,66 +17,8 @@
         }
     }
 
-    // //NAV BAR
-    // nav.navbar {
-    //     padding: 2.5rem 0;
-    //     position: relative;
-    //     justify-content: space-between;
-    //     z-index: 1;
-    //     .nav-list a {
-    //         display: inline-block;
-    //         padding: 1rem;
-    //         @include font-set($fs-small, $fw-400, $lh-24);
-    //         font-style: normal;
-    //         color: $text-color;
-    //         padding-top: 16px;
-    //         padding-left: 25px;
-    //     }
-    // }
+   
 
-    // //PRODUCT LIST
-    // .pro-feature {
-    //     position: relative;
-    //     background-color: $bg-pro;
-    //     .card {
-    //         position: absolute;
-    //         background-color: $bg-card;
-    //         .card-img-top{
-    //         }
-    //         .card-title {
-    //             @include font-set($fs-mid, $fw-300, $lh-29);
-    //             font-style: $fs-style;
-    //             color: $text-color;
-    //         }
-    //         .card-text,
-    //         p {
-    //             @include font-set($fs-small, $fw-300, $lh-24);
-    //             font-style: $fs-style;
-    //             color: $des-color;
-    //         }                           
-    //         img {
-    //             transition: all 1s;
-    //         }
-    //         img:hover {
-    //             transform: scale(103%);
-    //         }
-    //         .card-button {
-    //             display: inline-block;
-    //             text-align: center;
-    //             .btn {
-    //             @include font-set($fs-normal, $fw-200, $lh-29);
-    //             color: $text-color !important;
-    //             background-color: $bg-button;
-    //             font-style: $fs-style;
-    //             }
-    //             .span {
-    //             background-color: $bg-span !important;
-    //             }
-    //         }
-    //     }
-    //     .card:hover {
-    //         box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, .1);
-    //     }
-    // }
+    
     
     

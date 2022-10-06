@@ -24,6 +24,9 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- OWL-CAROUSEL -->
+		<link rel="stylesheet" href="./css/owl.carousel.min.css" />
+		<link rel="stylesheet" href="./css/owl.theme.default.min.css" />
 
     <!-- MY STYLE  -->
     <link rel="stylesheet" href="./css/style.css" />
@@ -71,45 +74,93 @@
       </header>
       <!-- header ends -->
       <!-- carousel starts -->
-      <div class="container">
-        <div class="carousel-container">
-          <div class="carousel-content">
-            <h1 class="carousel-heading">Product name</h1>
-            <p class="carousel-des">Product description ....</p>
-            <a href="#" class="btn btn-warning">Buy now</a>
-          </div>
-          <div class="carousel-img">
-            <img src="./img/image 6.png" alt="" />
-          </div>
-        </div>
-      </div>
+      <section class="main-slider-area">
+				<div class="container-fluid">
+					<div id="carouselSlider" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+						  <li data-target="#carouselSlider" data-slide-to="0" class="active"></li>
+						  <li data-target="#carouselSlider" data-slide-to="1"></li>
+						  <li data-target="#carouselSlider" data-slide-to="2"></li>
+						</ol>
+						<div class="carousel-inner">
+						  <div class="carousel-item active">
+							<img src="./img/image 6.png" class="d-block w-100" alt="...">
+							<div class="carousel-caption d-none d-md-block">
+							  
+							  <h5>Product name</h5>
+                <p>Product description ....</p>
+							  <button>Buy now</button>
+              						
+						  </div>
+						  </div>
+						  <div class="carousel-item">
+                <img src="./img/image 6.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  
+                  <h5>Product name</h5>
+                  <p>Product description ....</p>
+                  <button>Buy now</button>							
+                </div>
+                </div>
+						</div>
+					  </div>
+				</div>				
+			</section>
       <!-- carousel ends -->
-    </div>
-
+    
     <!-- Product Feature starts -->
-    <!-- <section class="pro-feature">
-      <div class="container">
-        <div class="display-4 text-center">Product Feature</div>
+    <section class="pro-feature">
+    <div class="small-container">
+      <div class="pro-title">
+        <p>- Product Feature -</p>
       </div>
-      <div class="row">
-        <div class="col-4">
-          <div class="card text-left">
-            <img class="card-top" src="./img/image 5.png" alt="" />
-            <div class="card-body">
-              <h4 class="card-title">Adidas Prophere</h4>
-              <p class="card-text">short descript...</p>
-              <div class="card-button">
-                <button class="btn">Buy now</button>
-                <span>$85</span>
-              </div>
+      <div class="pro-container">
+        <div class="row">
+          <div class="col-4">
+            <img src="./img/image 5.png" alt="">
+            <h4 class="card-title">Adidas Prophere</h4>
+            <p class="card-text">short descript...</p>
+            <div class="card-button">
+                  <button class="btn">Buy now</button>
+                  <span>$85</span>
+            </div>
+          </div>
+          <div class="col-4">
+            <img src="./img/image 5.png" alt="">
+            <h4 class="card-title">Adidas Prophere</h4>
+            <p class="card-text">short descript...</p>
+            <div class="card-button">
+                  <button class="btn">Buy now</button>
+                  <span>$85</span>
+            </div>
+          </div>
+          <div class="col-4">
+            <img src="./img/image 5.png" alt="">
+            <h4 class="card-title">Adidas Prophere</h4>
+            <p class="card-text">short descript...</p>
+            <div class="card-button">
+                  <button class="btn">Buy now</button>
+                  <span>$85</span>
             </div>
           </div>
         </div>
       </div>
-    </section> -->
+    </div>
+ 
+
+
+        
+
+
+    </section>
+
+
+
+   
+      
     <!-- Product Feature ends -->
 
-    <footer></footer>
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -123,7 +174,27 @@
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
       crossorigin="anonymous"
     ></script>
-
+    <!-- Owl Carousel -->
+    <script src="./js/owl.carousel.min.js"></script>
+		<script>
+			$('.owl-carousel').owlCarousel({
+								loop: true,
+				margin: 30,
+				dots: true,
+				autoplay: true,
+				responsive: {
+					0: {
+						items: 1,
+					},
+					600: {
+						items: 2,
+					},
+					1000: {
+						items: 3,
+					},
+				},
+			});
+		</script>
     <!-- MY SCRIPT -->
     <script src="./js/index.js"></script>
   </body>
