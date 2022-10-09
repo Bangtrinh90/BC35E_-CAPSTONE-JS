@@ -44,6 +44,18 @@ body {
   padding-right: 25px;
 }
 
+.container-fluid {
+  padding: 0;
+}
+
+.top-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
 .top-header-container {
   display: flex;
   justify-content: space-between;
@@ -67,7 +79,13 @@ body {
 }
 
 .header {
-  padding: 15px 0 3px 38px;
+  padding: 15px 0 0 18px;
+  position: fixed;
+  width: 100%;
+  top: 65px;
+  right: 0;
+  z-index: 9;
+  background-color: #FFFFFF;
 }
 .header-menu .menu {
   display: flex;
@@ -88,19 +106,26 @@ body {
      object-fit: cover;
 }
 
+.carousel-item {
+  position: relative;
+}
 .carousel-item img {
   width: 100%;
   background-image: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+.carousel-item .carousel-item-img img {
+  position: absolute;
+  top: 8px;
+  left: 109px;
+  width: 50%;
+}
 
 .carousel-caption {
-  text-align: right;
-  left: 0;
-  bottom: 0;
-  margin: 0 28px;
-  padding: 170px 55px;
+  position: absolute;
+  right: -362px;
+  top: 25px;
 }
 .carousel-caption h5 {
   font-size: 24px;
@@ -112,20 +137,22 @@ body {
   color: black;
   font-weight: 300;
 }
-.carousel-caption button {
+.carousel-caption a {
   background-color: #F8B653;
   color: #FFFFFF;
+  font-size: 16px;
   outline: none;
   border: none;
   height: 2rem;
   width: 7rem;
+  padding: 5px 10px;
   cursor: pointer;
   transition: all 0.25s;
 }
-.carousel-caption button:hover {
+.carousel-caption a:hover {
   background-color: #F5F5F5;
   color: black;
-  border: solid 1px black;
+  border: solid 0.5px #F8B653;
 }
 
 .carousel-indicators {
@@ -136,26 +163,223 @@ body {
   gap: 8px;
 }
 
-.pro-feature .pro-title {
+.pro-title {
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+.pro-title p {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 48px;
   text-align: center;
+}
+
+.pro-box {
+  width: 100%;
+  display: flex;
+}
+.pro-box .pro-card {
+  flex: 30%;
+  text-align: left;
+  transition: 0.3s;
+  background-color: #F8F8F8;
+  margin-right: 40px;
+  margin-bottom: 30px;
+}
+.pro-box .pro-card:hover {
+  box-shadow: 5px 5px 5px rgb(223, 220, 220);
+}
+.pro-box .pro-card img {
+  width: 100%;
+  padding: 30px;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.pro-box .pro-card img:hover {
+  transform: scale(113%);
+}
+.pro-box .pro-card .card-text h4 {
+  font-size: 24px;
+  padding-left: 20px;
+  font-weight: 300;
+  line-height: 29px;
+  margin-bottom: 25px;
+}
+.pro-box .pro-card .card-text p {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 24px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+  color: #CBC9C9;
+}
+.pro-box .pro-card .card-text .card-button {
+  display: inline;
+  color: black;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.pro-box .pro-card .card-text .card-button .btn {
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 29px;
+  background-color: #E1B067;
+  padding: 8px 77px;
+  transition: all 0.5s;
+  border: none;
+}
+.pro-box .pro-card .card-text .card-button .btn:hover {
+  background-color: #F5F5F5;
+  border: solid 0.5px #F8B653;
+}
+.pro-box .pro-card .card-text .card-button span {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #DEDDDC;
+  padding: 12px 42px;
+}
+
+.carousel-inner {
+  display: flex;
+}
+.carousel-inner .carousel-item {
+  position: relative;
+  flex: 1;
+}
+.carousel-inner .carousel-item img {
+  max-width: 100%;
+  width: 25%;
+  position: absolute;
+  top: 58px;
+  left: 65px;
+}
+.carousel-inner .carousel-item .carousel-caption {
+  flex-basis: 50%;
+  position: absolute;
+}
+
+.carousel-caption {
+  position: absolute;
+  right: -362px;
+  top: 25px;
+}
+.carousel-caption h5 {
   font-size: 24px;
   color: black;
+  font-weight: 300;
+}
+.carousel-caption p {
+  font-size: 16px;
+  color: black;
+  font-weight: 300;
+}
+.carousel-caption a {
+  background-color: #F8B653;
+  color: #FFFFFF;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  height: 2rem;
+  width: 7rem;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.carousel-caption a:hover {
+  background-color: #F5F5F5;
+  color: black;
+  border: solid 0.5px #F8B653;
+}
+
+.carousel-indicators {
+  left: unset;
+  right: 20px;
+  bottom: 100px;
+  margin: unset;
+  gap: 8px;
+}
+
+.pro-title {
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+.pro-title p {
+  font-size: 40px;
   font-weight: 400;
-  margin-bottom: 2rem;
+  line-height: 48px;
+  text-align: center;
 }
-.pro-feature .pro-container .row {
-  display: flex;
-  align-items: center;
-}
-.pro-feature .pro-container .col-4 {
-  flex: 30%;
-  padding: 10px;
-  margin-bottom: 15px;
-  position: relative;
-}
-.pro-feature .pro-container .col-4 img {
+
+.pro-box {
   width: 100%;
-  position: absolute;
+  display: flex;
+}
+.pro-box .pro-card {
+  flex: 30%;
+  text-align: left;
+  transition: 0.3s;
+  background-color: #F8F8F8;
+  margin-right: 40px;
+  margin-bottom: 30px;
+}
+.pro-box .pro-card:hover {
+  box-shadow: 5px 5px 5px rgb(223, 220, 220);
+}
+.pro-box .pro-card img {
+  width: 100%;
+  padding: 30px;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.pro-box .pro-card img:hover {
+  transform: scale(113%);
+}
+.pro-box .pro-card .card-text h4 {
+  font-size: 24px;
+  padding-left: 20px;
+  font-weight: 300;
+  line-height: 29px;
+  margin-bottom: 25px;
+}
+.pro-box .pro-card .card-text p {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 24px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+  color: #CBC9C9;
+}
+.pro-box .pro-card .card-text .card-button {
+  display: inline;
+  color: black;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.pro-box .pro-card .card-text .card-button .btn {
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 29px;
+  background-color: #E1B067;
+  padding: 8px 77px;
+  transition: all 0.5s;
+  display: inline-block;
+  border: none;
+}
+.pro-box .pro-card .card-text .card-button .btn:hover {
+  background-color: #F5F5F5;
+  border: solid 0.5px #F8B653;
+}
+.pro-box .pro-card .card-text .card-button span {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #DEDDDC;
+  padding: 12px 42px;
 }
 
 .register .container {
@@ -243,6 +467,7 @@ body {
 .register .container .itemGender .category {
   display: flex;
   flex: 80%;
+  margin-left: 30px;
   justify-content: space-around;
 }
 .register .container .itemGender .category label {

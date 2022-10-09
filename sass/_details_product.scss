@@ -1,0 +1,151 @@
+// CAROUSEL
+.carousel-inner {
+    display: flex;
+    .carousel-item {
+        position: relative;
+        flex: 1;
+        img {
+            max-width: 100%;
+            width: 25%;
+            position: absolute;
+            top: 58px;
+            left: 65px;
+        }
+        .carousel-caption {
+            flex-basis: 50%;
+            position: absolute;
+        }
+    }
+}
+
+
+
+
+.carousel-caption { 
+    position: absolute;
+	right: -362px;
+	top: 25px;
+    	       
+    h5 {
+	font-size: $fs-mid;
+    color: $text-color;        
+    font-weight: $fw-300;
+    }
+    p {        
+    font-size: $fs-normal;
+    color: $text-color;        
+    font-weight: $fw-300;           
+    }
+    a {
+    background-color: $bg-button2;
+    color: $text-button;
+    font-size: $fs-normal;
+    outline: none;
+    border: none;
+    height: 2rem;
+    width: 7rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all .25s;
+    &:hover{
+        background-color: $bg-pro;
+        color: $text-color;
+        border: solid .5px $bg-button2;
+        }
+    }
+}
+.carousel-indicators {	
+	left: unset;
+	right: 20px;
+	bottom: 100px;
+	margin: unset;	
+	gap: 8px;
+}
+
+//PRODUCT FEATURE
+.pro-title{
+    margin-top: 40px;
+    margin-bottom: 70px; 
+    p {
+    font-size: $fs-lar;
+    font-weight: $fw-400;
+    line-height: $lh-48;
+    text-align: center;
+    }
+}
+.pro-box {
+        width: 100%;
+        display: flex;
+        .pro-card {
+            flex: 30%;            
+            text-align: left;
+            transition: .3s;
+            background-color: $bg-card;
+            margin-right: 40px;
+            margin-bottom: 30px;
+            &:hover {
+                box-shadow: 5px 5px 5px rgb(223, 220, 220);
+            }
+            img {
+                width: 100%;
+                padding: 30px;
+                align-items: center;
+                cursor: pointer;
+                transition: .3s;
+                &:hover{
+                    transform: scale(113%);
+                }
+            }
+            .card-text { 
+                
+            h4 {
+                font-size: $fs-mid;
+                padding-left: 20px;
+                font-weight: $fw-300;
+                line-height: $lh-29;
+                margin-bottom: 25px;
+            }
+            p {
+                font-size: $fs-mid;
+                font-weight: $fw-300;
+                line-height: $lh-24;
+                padding-left: 20px;
+                margin-bottom: 25px;
+                color: $des-color;
+            }
+            
+            .card-button {
+                display: inline;
+                color: $text-color;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                .btn {
+                    font-size: $fs-small;
+                    font-weight: $fw-200;
+                    line-height: $lh-29;
+                    background-color: $bg-button;        
+                    padding: 8px 77px;
+                    transition: all .5s;
+                    display: inline-block;
+                    border: none;
+                    &:hover{
+                        background-color: $bg-pro;
+                        
+                        border: solid .5px $bg-button2;
+                    }
+                }
+                span {
+                    text-align: center;
+                    font-size: $fs-normal;
+                    font-weight: $fw-600;
+                    background-color: $bg-span;
+                    padding: 12px 42px;
+                    
+                }
+            }
+        }
+        
+
+    }
+}
