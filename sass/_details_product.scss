@@ -63,10 +63,7 @@
         @media (max-width: 600px) {
             width: 100%;
         }
-        }
-
-    
-    
+        }    
     .slide2-content .slide2-size a {
         display: inline-block;
         text-align: center;
@@ -86,6 +83,13 @@
         font-weight: $fw-600 !important;
         line-height: $lh-29;
     }
+    .slide2-number input.quantity {
+        border: none;
+        width: 10px;
+        margin-right: 10px;
+        color: $text-color;
+    }
+    
     .slide2-content .slide2-number .number-item {
         display: inline-block;
         text-align: center;
@@ -197,20 +201,21 @@
             }
             
             .card-button {
-                display: inline-block;                
+                display: inline-flex;
+                width: 100%;               
                 color: $text-color;                
                 .btn {
                     font-size: $fs-small;
                     font-weight: $fw-200;
                     line-height: $lh-24;
                     background-color: $bg-button;        
-                    padding: 15px 40px;
-                    transition: all .5s;
+                    padding: 5px 50px;
+                    transition: .3s;
                     border: none;
                     &:hover{
                         background-color: $bg-pro;
+                        color: $bg-button2;
                         
-                        border: solid .5px $bg-button2;
                     }
                 }
                 span {
@@ -225,3 +230,5 @@
             }
         }
     }
+
+ 

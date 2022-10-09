@@ -377,6 +377,12 @@ body {
   font-weight: 600 !important;
   line-height: 29px;
 }
+.owl-carousel .slide2-number input.quantity {
+  border: none;
+  width: 10px;
+  margin-right: 10px;
+  color: black;
+}
 .owl-carousel .slide2-content .slide2-number .number-item {
   display: inline-block;
   text-align: center;
@@ -484,7 +490,8 @@ body {
   color: #CBC9C9;
 }
 .pro-box .pro-card .card-text .card-button {
-  display: inline-block;
+  display: inline-flex;
+  width: 100%;
   color: black;
 }
 .pro-box .pro-card .card-text .card-button .btn {
@@ -492,13 +499,13 @@ body {
   font-weight: 200;
   line-height: 24px;
   background-color: #E1B067;
-  padding: 15px 40px;
-  transition: all 0.5s;
+  padding: 5px 50px;
+  transition: 0.3s;
   border: none;
 }
 .pro-box .pro-card .card-text .card-button .btn:hover {
   background-color: #F5F5F5;
-  border: solid 0.5px #F8B653;
+  color: #F8B653;
 }
 .pro-box .pro-card .card-text .card-button span {
   text-align: center;
