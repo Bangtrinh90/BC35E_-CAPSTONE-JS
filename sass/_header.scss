@@ -2,7 +2,7 @@
     position: sticky;
     top:0; left:0; right:0;
     z-index: 100;
-
+   
     &-container{
     display: flex;
     justify-content: space-between;
@@ -28,12 +28,12 @@
 
 .header{
     padding: 15px 0 0 18px;
-    position: fixed; 
-      
+    position: fixed;      
     width: 100%;
     top: 65px; right:0;
     z-index: 9;
     background-color: $text-button;
+    
     &-menu{
         .menu{
         display: flex;
@@ -52,6 +52,9 @@
 
 .footer{
     margin-top: 100px;
+    @media (max-width: 600px) {
+        width: 100%;
+    }
     &-img img {
         width: 100%;
         object-fit: cover;
