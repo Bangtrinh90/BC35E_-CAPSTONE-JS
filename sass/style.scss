@@ -1,24 +1,17 @@
-@import "./reset";
-@import "./variables";
-@import "./global";
-@import "./header";
-@import "./_product_list";
-@import "./_details_product";
-@import "./_register";
+@import './reset';
+@import './variables';
+@import './global';
+@import './header';
+@import './carousel';
+@import './_product_list';
+@import './_details_product';
+@import './_register';
 
-
-
-    //FONT MIXIN
-    @mixin font-set($size, $weight, $line-height) {
-        font: {
-            size: $size;
-            weight: $weight;
-            line-height: $line-height;
-        }
-    }
-
-   
-
-    
-    
-    
+//FONT MIXIN
+@mixin font-set($size, $weight, $line-height) {
+	font: {
+		size: $size;
+		weight: $weight;
+		line-height: $line-height;
+	}
+}
