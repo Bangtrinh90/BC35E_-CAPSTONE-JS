@@ -1,160 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Register</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+	<head>
+		<title>Register</title>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
 
-    <!-- FONTAWESOME  -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- GOOGLE FONT  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <!-- MY STYLE  -->
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <!-- top-header starts -->
-      <section class="top-header">
-        <div class="top-header-container">
-          <div class="top-header-logo">
-            <img src="./img/image 3.2.png" alt="" />
-          </div>
-          <div class="top-header-auth">
-            <span><img src="./img/image 8.png" alt="" /></span>
-            <a href="#" class="header-login"> Login</a>
-            <a href="#" class="header-register">Register</a>
-          </div>
-        </div>
-      </section>
-      <!-- top-header ends -->
-      <!-- header starts -->
-      <header class="header">
-        <div class="container">
-          <div class="header-menu">
-            <ul class="menu">
-              <li class="menu-item">
-                <a href="#" class="menu-link">Home</a>
-              </li>
-              <li class="menu-item">
-                <a href="#" class="menu-link">Men</a>
-              </li>
-              <li class="menu-item">
-                <a href="#" class="menu-link">Women</a>
-              </li>
-              <li class="menu-item">
-                <a href="#" class="menu-link">Kid</a>
-              </li>
-              <li class="menu-item">
-                <a href="#" class="menu-link">Sport</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </header>
-      <!-- header ends -->
-      <!-- register form starts -->
-      <section class="register">
-        <div class="container">
-          <div class="regTitle">
-            <h3>Register</h3>
-          </div>
-          <div class="regInner">
-            <div class="regItem">
-              <div class="itemInner">
-                <input type="text" placeholder="email" />
-                <div class="inputAlert">(*)</div>
-              </div>
-              <div class="itemInner">
-                <input placeholder="password" />
-                <div class="inputAlert">(*)</div>
-              </div>
-              <div class="itemInner">
-                <input placeholder="password confirm" />
-                <div class="inputAlert">(*)</div>
-              </div>
-            </div>
-            <div class="regItem">
-              <div class="itemInner">
-                <input type="text" placeholder="name" />
-                <div class="inputAlert">(*)</div>
-              </div>
-              <div class="itemInner">
-                <input type="number" placeholder="phone" />
-                <div class="inputAlert">(*)</div>
-              </div>
-              <div class="itemGender">
-                <input type="radio" name="gender-opt" id="dot-1" />
-                <input type="radio" name="gender-opt" id="dot-2" />
-                <div class="gender-title">
-                  <span class="gender-title-text">Gender</span>
-                </div>
+		<!-- FONTAWESOME  -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+			integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<!-- GOOGLE FONT  -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<!-- MY STYLE  -->
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- top-header starts -->
+			<section class="top-header">
+				<div class="top-header-container">
+					<div class="top-header-logo">
+						<a href="./index.html">
+							<img src="./img/image 3.2.png" alt="" class="img-fluid" />
+						</a>
+					</div>
+					<div class="top-header-auth">
+						<div class="d-flex justify-content-center align-items-center">
+							<img src="./img/image 8.png" alt="" class="mr-1 img-fluid" />
+							<span class="text-white" style="font-size: 28px">(10)</span>
+						</div>
+						<a href="#" class="header-login"> Login</a>
+						<a href="#" class="header-register">Register</a>
+					</div>
+				</div>
+			</section>
+			<!-- top-header ends -->
+			<!-- header starts -->
+			<header class="header">
+				<div class="tiny-container">
+					<div class="header-menu">
+						<ul class="menu">
+							<li class="menu-item">
+								<a href="#" class="menu-link active">Home</a>
+							</li>
+							<li class="menu-item">
+								<a href="#" class="menu-link">Men</a>
+							</li>
+							<li class="menu-item">
+								<a href="#" class="menu-link">Women</a>
+							</li>
+							<li class="menu-item">
+								<a href="#" class="menu-link">Kid</a>
+							</li>
+							<li class="menu-item">
+								<a href="#" class="menu-link">Sport</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</header>
+			<!-- header ends -->
+			<!-- register form starts -->
+			<section class="register">
+				<div class="container">
+					<div class="regTitle">
+						<h3>Register</h3>
+					</div>
+					<div class="regInner">
+						<div class="regItem">
+							<div class="itemInner">
+								<input type="text" placeholder="email" />
+								<div class="inputAlert">(*)</div>
+							</div>
+							<div class="itemInner">
+								<input placeholder="password" />
+								<div class="inputAlert">(*)</div>
+							</div>
+							<div class="itemInner">
+								<input placeholder="password confirm" />
+								<div class="inputAlert">(*)</div>
+							</div>
+						</div>
+						<div class="regItem">
+							<div class="itemInner">
+								<input type="text" placeholder="name" />
+								<div class="inputAlert">(*)</div>
+							</div>
+							<div class="itemInner">
+								<input type="number" placeholder="phone" />
+								<div class="inputAlert">(*)</div>
+							</div>
+							<div class="itemGender">
+								<input type="radio" name="gender-opt" id="dot-1" />
+								<input type="radio" name="gender-opt" id="dot-2" />
+								<div class="gender-title">
+									<span class="gender-title-text">Gender</span>
+								</div>
 
-                <div class="category">
-                  <label for="dot-1">
-                    <span class="dot one"></span>
-                    <span class="gender-opt">Male</span>
-                  </label>
-                  <label for="dot-2">
-                    <span class="dot two"></span>
-                    <span class="gender-opt">Female</span>
-                  </label>
-                </div>
-              </div>
-              <div class="itemButton">
-                <button class="reg-button">Submit</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <footer class="footer">
-        <div class="footer-img">
-          <img src="./img/image 8 (1).png" alt="" />
-        </div>
-      </footer>
-    </div>
+								<div class="category">
+									<label for="dot-1">
+										<span class="dot one"></span>
+										<span class="gender-opt">Male</span>
+									</label>
+									<label for="dot-2">
+										<span class="dot two"></span>
+										<span class="gender-opt">Female</span>
+									</label>
+								</div>
+							</div>
+							<div class="itemButton">
+								<button class="reg-button">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Footer starts -->
+			<footer class="footer">
+				<div class="footer-top">
+					<div class="medium-container">
+						<div class="row">
+							<div class="col-12 col-md-4 mb-md-0 mb-4">
+								<h2 class="footer-heading">GET HELP</h2>
+								<ul class="list-unstyled">
+									<li><a href="#" class="d-block">Contact us</a></li>
+									<li><a href="#" class="d-block">Shopping</a></li>
+									<li><a href="#" class="d-block">NIKEID</a></li>
+									<li>
+										<a href="#" class="d-block">Nike+</a>
+									</li>
+								</ul>
+							</div>
+							<div class="col-12 col-md-4 mb-md-0 mb-4 border-left">
+								<h2 class="footer-heading">ORDERS</h2>
+								<ul class="list-unstyled">
+									<li><a href="#" class="d-block">Payment options</a></li>
+									<li>
+										<a href="#" class="d-block">Shipping and delivery</a>
+									</li>
+									<li><a href="#" class="d-block">Returns</a></li>
+								</ul>
+							</div>
+							<div class="col-12 col-md-4 mb-md-0 mb-4 border-left">
+								<h2 class="footer-heading">REGISTER</h2>
+								<span class="footer-review"
+									>Create one account to mange everything you do with Nike, from
+									your shopping preferences to your Nike+ activity</span
+								>
+								<div class="footer-more">
+									<a href="#">Learn more</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div class="medium-container">
+						<div class="row">
+							<div class="col-12 col-md-4 mb-md-0 mb-4">
+								<h2 class="footer-heading">EMAIL SIGN UP</h2>
+								<span class="footer-review"
+									>Be the first to know about new products and special
+									offers</span
+								>
+								<div class="footer-more">
+									<a href="#">Sign up now</a>
+								</div>
+							</div>
+							<div class="col-12 col-md-4 mb-md-0 mb-4 border-left">
+								<h2 class="footer-heading">GIFT CARDS</h2>
+								<span class="footer-review"
+									>Give the gift that always first</span
+								>
+								<div class="footer-more">
+									<a href="#">View cards</a>
+								</div>
+							</div>
+							<div class="col-12 col-md-4 mb-md-0 mb-4 border-left">
+								<h2 class="footer-heading">STORES NEAR YOU</h2>
+								<span class="footer-review"
+									>Locate a Nike retail store or authorized retailer</span
+								>
+								<div class="footer-more">
+									<a href="#">Search</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- Footer ends -->
+			<!-- Back to top starts -->
+			<a href="#" class="back-to-top cd-top text-replace js-cd-top">
+				<i class="fa fa-arrow-up"></i>
+			</a>
+			<!-- Back to top ends -->
+		</div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <!-- MY SCRIPT -->
-    <script src="./js/register.js"></script>
-  </body>
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"
+		></script>
+		<!-- Back to Top -->
+		<script src="./js/util.js"></script>
+		<script src="./js/main.js"></script>
+		<!-- MY SCRIPT -->
+	</body>
 </html>

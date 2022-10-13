@@ -154,6 +154,13 @@ body {
   padding-right: 20px;
 }
 
+.medium-container {
+  margin: auto;
+  width: 80%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .tiny-container {
   margin: auto;
   padding-left: 10px;
@@ -605,6 +612,79 @@ body {
   color: #fff;
   background-color: #17a2b8;
   border: none;
+}
+
+.footer {
+  padding-top: 60px;
+}
+.footer-top {
+  padding: 30px 0px;
+}
+.footer-bottom {
+  padding: 40px 0px;
+  background-color: #ececec;
+}
+.footer-heading {
+  font-size: 20px;
+  color: #000000;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.footer-review {
+  color: #000000;
+  font-size: 14px;
+  display: inline-block;
+  font-weight: 500;
+  min-height: 50px;
+}
+.footer-more a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #d46661;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.list-unstyled li a {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+}
+.list-unstyled li a:hover {
+  text-decoration: none;
+  color: #d017ee;
+  font-weight: 600;
+}
+
+.back-to-top {
+  width: 50px;
+  height: 50px;
+  background: #f55f8d;
+  border-radius: 8px;
+  line-height: 50px;
+  text-align: center;
+  display: block;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  color: #fff;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-box-shadow: -4px 4px 24px -10px #f55f8d;
+  box-shadow: -4px 4px 24px -10px #f55f8d;
+  visibility: hidden;
+  opacity: 0;
+}
+.back-to-top:hover {
+  color: #fff;
+}
+
+.cd-top--is-visible {
+  visibility: visible;
+  opacity: 1;
 }
 
 .register .container {
