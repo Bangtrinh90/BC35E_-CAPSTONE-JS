@@ -1,137 +1,124 @@
 //FONT MIXIN
 @mixin font-set($size, $weight, $line-height) {
-    font: {
-        size: $size;
-        weight: $weight;
-        line-height: $line-height;
-    }
+	font: {
+		size: $size;
+		weight: $weight;
+		line-height: $line-height;
+	}
 }
 
-@mixin  button() {
-    outline: none;
-    border: none;
-    height: 3rem;
-    width: 13rem;
-    background-color: $purple-btn;
-    padding: 4px 40px;
-    color: $bg-register;
-    cursor: pointer;
-    margin: 1rem 0;
-    font-size: $fs-mid;
-    transition: all .5s;
-    &:hover{
-    background-color: $bg-card;
-    color: $purple-btn;
-    border: solid 1px $purple-btn;
-    }
-   
+@mixin button() {
+	outline: none;
+	border: none;
+	height: 3rem;
+	width: 13rem;
+	background-color: $purple-btn;
+	padding: 4px 40px;
+	color: $bg-register;
+	cursor: pointer;
+	margin: 1rem 0;
+	font-size: $fs-mid;
+	transition: all 0.5s;
+	&:hover {
+		background-color: $bg-card;
+		color: $purple-btn;
+		border: solid 1px $purple-btn;
+	}
 }
 
 .register {
-    .container {
-        width: 80%;
-        margin: auto;
-        .regTitle {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        @media (max-width: 600px) {
-            width: 100%;
-        }
-        .regInner {
-            width: 100%;
-            display: flex;
-            
-            @media (max-width: 600px) {
-                flex-direction: column;
-            }
-            
-            .regItem {
-                width: 50%;
-                padding: 0 50px;
-                @media (max-width: 600px) {
-                    width: 100%;
-                }
-                .itemInner {
-                    position: relative;
-                    display: flex;
-                    margin-bottom: 25px;
-                    input {
-                        flex: 90%;
-                        border: none;
-                        height: 36px;
-                        margin-bottom: 8px;
-                        &::placeholder {
-                            color: $text-color;
-                            font-size: $fs-mid;
-                        }
-                    }
-                    .inputAlert {
-                        flex: 10%;
-                        justify-self: flex-end;
-                        color: $red-color;
-                        text-align: right;
-                        font-weight: bolder;
-                    }
-                    &::after {
-                        position:absolute;
-                        display: block;
-                        content: "";
-                        width: 100%;
-                        height: 6px;
-                        background-image: $mautim;
-                        bottom: 0;
-                        left: 0;
-                    }
-                }
-            }
-        }
-        .itemGender {
-            color: $text-color;
-            font-size: $fs-mid;
-            display: flex;
-            align-items: center;
-            color: $text-color !important;
-            font-size: $fs-mid !important;
-            
-            .gender-title{
-                flex: 20%;
-                
-            }
-            .category{
-                display: flex;
-                flex: 80%;
-                margin-left: 30px;                
-                justify-content: space-around;                
-                label {
-                    display: flex;
-                    align-items: end;
-                    margin-right: 30px;
-                    .dot{
-                        height: 42px;
-                        width: 49px;
-                        border-radius: 50%;
-                        background-color: $dot-color;
-                        margin-right: 13px;
-                        border: 10px solid transparent;
-                    }
+	.container {
+		width: 80%;
+		margin: auto;
+		.regTitle {
+			text-align: center;
+			margin: 50px 0px;
+			font-weight: 400;
+			font-size: 40px;
+			line-height: 48px;
+			color: #000000;
+		}
+		@media (max-width: 600px) {
+			width: 100%;
+		}
+		.regInner {
+			width: 100%;
+			display: flex;
 
-                }
-            }
-            #dot-1:checked ~ .category label .one,
-            #dot-2:checked ~ .category label .two{
-            border-color: $dot-color;
-            background: $purple-btn;
+			@media (max-width: 600px) {
+				flex-direction: column;
+			}
 
-            }
-            input[type="radio"]{
-                display: none;
-            }              
-        }
-    
-        .reg-button{
-            @include button();
-            align-items: center;
-            margin-top: 45px;
-        }
-}   } 
+			.regItem {
+				width: 50%;
+				padding: 0 50px;
+				@media (max-width: 600px) {
+					width: 100%;
+				}
+				.itemInner {
+					position: relative;
+					display: flex;
+					margin-bottom: 25px;
+					input {
+						flex: 90%;
+						border: none;
+						height: 36px;
+						margin-bottom: 8px;
+						&::placeholder {
+							color: $text-color;
+							font-size: $fs-mid;
+						}
+					}
+					.inputAlert {
+						flex: 10%;
+						justify-self: flex-end;
+						color: $red-color;
+						text-align: right;
+						font-weight: bolder;
+					}
+					&::after {
+						position: absolute;
+						display: block;
+						content: '';
+						width: 100%;
+						height: 6px;
+						background-image: $mautim;
+						bottom: 0;
+						left: 0;
+					}
+				}
+			}
+		}
+		.itemGender {
+			color: $text-color;
+			font-size: $fs-mid;
+			display: flex;
+			align-items: center;
+			color: $text-color !important;
+			font-size: $fs-mid !important;
+		}
+		.reg-button {
+			@include button();
+			align-items: center;
+			margin-top: 45px;
+		}
+	}
+}
+.radio-input {
+	display: none;
+}
+.radio-label {
+	width: 2rem;
+	height: 2rem;
+	border-radius: 2rem;
+	background-color: #ececec;
+	display: inline-block;
+	cursor: pointer;
+	margin: 0 1rem;
+	box-shadow: 0 0 0 4px #ececec;
+	transition: all 0.25s linear;
+}
+.radio-input:checked + .radio-label {
+	box-shadow: 0 0 0 4px #ececec, 0 0 0 6px #ae18e2;
+	background-color: #ae18e2;
+}
