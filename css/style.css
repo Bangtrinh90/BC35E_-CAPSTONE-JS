@@ -516,58 +516,95 @@ body {
   background-color: #DEDDDC;
 }
 
-.pro-title {
-  margin-top: 40px;
-  margin-bottom: 70px;
+.profile {
+  padding: 117px 0 39px 0px;
+  background-color: #f5f5f5;
 }
-.pro-title p {
-  font-size: 24px;
+.profile-left a img {
+  cursor: pointer;
+}
+.profile-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile-prodName {
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+  margin-bottom: 9px;
+}
+.profile-desc {
   font-weight: 400;
-  line-height: 48px;
-  text-align: center;
+  font-size: 16px;
+  line-height: 19px;
+  color: #140101;
+  max-width: 503px;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+.profile-titleSize {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1ed90e;
+  margin-bottom: 15px;
+}
+.profile-size {
+  margin-bottom: 17px;
+  margin-top: 15px;
+}
+.profile-size-item {
+  cursor: pointer;
+  padding: 8px 11px;
+  color: #000000;
+  background: #cccccc;
+  margin-right: 20px;
+  font-weight: 600;
+  font-size: 22px;
+  color: #1e1d1d;
+}
+.profile-size-item.active {
+  border: 2px solid;
+  border-image: linear-gradient(45deg, rgba(62, 32, 248, 0.9), #d017ee) 1;
+}
+.profile-price {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  color: #fc0303;
+}
+.profile-addOrRemove {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+.profile-numb {
+  font-weight: 400;
+  font-size: 30px;
+  color: #000000;
 }
 
-.pro-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
-}
-.pro-box .pro-card {
-  flex: 30%;
-  text-align: left;
-  transition: 0.3s;
-  background-color: #F8F8F8;
-  margin-right: 40px;
-  margin-bottom: 30px;
-}
-.pro-box .pro-card:hover {
-  box-shadow: 5px 5px 5px rgb(223, 220, 220);
-}
-.pro-box .pro-card img {
-  width: 100%;
-  padding: 30px;
-  align-items: center;
+.btn-detail {
+  margin-top: 7px;
+  color: white;
+  padding: 14px 35px;
+  background: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #d017ee 89.71%);
   cursor: pointer;
-  transition: 0.3s;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  isolation: isolate;
 }
-.pro-box .pro-card img:hover {
-  transform: scale(113%);
-}
-.pro-box .pro-card .card-text h4 {
-  font-size: 24px;
-  padding-left: 20px;
-  font-weight: 300;
-  line-height: 29px;
-  margin-bottom: 25px;
-}
-.pro-box .pro-card .card-text p {
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 24px;
-  padding-left: 20px;
-  margin-bottom: 25px;
-  color: #CBC9C9;
+
+.btn-info:hover {
+  color: #fff;
+  background-color: #17a2b8;
+  border: none;
 }
 
 .register .container {
