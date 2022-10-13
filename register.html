@@ -111,22 +111,25 @@
 								<div class="inputAlert">(*)</div>
 							</div>
 							<div class="itemGender">
-								<input type="radio" name="gender-opt" id="dot-1" />
-								<input type="radio" name="gender-opt" id="dot-2" />
-								<div class="gender-title">
+								<div class="gender-title mr-4">
 									<span class="gender-title-text">Gender</span>
 								</div>
-
-								<div class="category">
-									<label for="dot-1">
-										<span class="dot one"></span>
-										<span class="gender-opt">Male</span>
-									</label>
-									<label for="dot-2">
-										<span class="dot two"></span>
-										<span class="gender-opt">Female</span>
-									</label>
-								</div>
+								<input
+									type="radio"
+									id="male"
+									class="radio-input"
+									name="gender"
+								/>
+								<label for="male" class="radio-label"></label>
+								<span class="radio-male">Male</span>
+								<input
+									type="radio"
+									id="fmale"
+									class="radio-input"
+									name="gender"
+								/>
+								<label for="fmale" class="radio-label"></label>
+								<span class="radio-female">Female</span>
 							</div>
 							<div class="itemButton">
 								<button class="reg-button">Submit</button>
