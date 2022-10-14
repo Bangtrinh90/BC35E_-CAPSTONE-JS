@@ -41,7 +41,7 @@ const callAPI = async () => {
 							}</p>
               <div class="card-button">
                 <div class="w-50 d-flex justify-content-center align-items-center">
-                  <a class="btn-buy d-flex justify-content-center align-items-center" href="./details.html?productid=${id}">
+                  <a class="btn-buy d-flex justify-content-center align-items-center" href="./details.html?product_id=${id}">
                     <span>Buy now</span>
                   </a>
                 </div>
