@@ -38,6 +38,11 @@
 			integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
 			crossorigin="anonymous"
 		/>
+		<!-- FANCY BOX-->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+		/>
 		<!-- MY STYLE  -->
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
@@ -166,137 +171,85 @@
 					<div class="pro-title-primary">
 						<h1>- Product Feature -</h1>
 					</div>
-					<div class="row">
-						<div class="col-12 col-lg-4">
-							<div class="pro-card-primary">
-								<img src="./img/image 5.png" alt="" />
-								<div class="card-text-primary">
-									<h4>Adidas Prophere</h4>
-									<p>short descript ...</p>
-									<div class="card-button">
-										<div class="w-50">
-											<button class="btn-primary" href="#">Buy now</button>
-										</div>
-										<div class="w-50">
-											<div
-												class="btn-price d-flex justify-content-center align-items-center"
-											>
-												<span class="priceText">123$</span>
-											</div>
-										</div>
-									</div>
-								</div>
+					<div class="row d-flex" id="prodLists"></div>
+				</div>
+			</section>
+			<!-- Product Feature ends -->
+			<!-- Footer starts -->
+			<footer class="footer">
+				<div class="footer-top">
+					<div class="medium-container">
+						<div class="row">
+							<div class="col-12 col-md-4 mb-md-0 mb-4">
+								<h2 class="footer-heading">GET HELP</h2>
+								<ul class="list-unstyled">
+									<li><a href="#" class="d-block">Contact us</a></li>
+									<li><a href="#" class="d-block">Shopping</a></li>
+									<li><a href="#" class="d-block">NIKEID</a></li>
+									<li>
+										<a href="#" class="d-block">Nike+</a>
+									</li>
+								</ul>
 							</div>
-						</div>
-						<div class="col-12 col-lg-4">
-							<div class="pro-card-primary">
-								<img src="./img/image 5.png" alt="" />
-								<div class="card-text-primary">
-									<h4>Adidas Prophere</h4>
-									<p>short descript ...</p>
-									<div class="card-button">
-										<div class="w-50">
-											<button class="btn-primary" href="#">Buy now</button>
-										</div>
-										<div class="w-50">
-											<div
-												class="btn-price d-flex justify-content-center align-items-center"
-											>
-												<span class="priceText">123$</span>
-											</div>
-										</div>
-									</div>
-								</div>
+							<div class="col-12 col-md-4 mb-md-0 mb-4 border-left">
+								<h2 class="footer-heading">ORDERS</h2>
+								<ul class="list-unstyled">
+									<li><a href="#" class="d-block">Payment options</a></li>
+									<li>
+										<a href="#" class="d-block">Shipping and delivery</a>
+									</li>
+									<li><a href="#" class="d-block">Returns</a></li>
+								</ul>
 							</div>
-						</div>
-						<div class="col-12 col-lg-4">
-							<div class="pro-card-primary">
-								<img src="./img/image 5.png" alt="" />
-								<div class="card-text-primary">
-									<h4>Adidas Prophere</h4>
-									<p>short descript ...</p>
-									<div class="card-button">
-										<div class="w-50">
-											<button class="btn-primary" href="#">Buy now</button>
-										</div>
-										<div class="w-50">
-											<div
-												class="btn-price d-flex justify-content-center align-items-center"
-											>
-												<span class="priceText">123$</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-12 col-lg-4">
-							<div class="pro-card-primary">
-								<img src="./img/image 5.png" alt="" />
-								<div class="card-text-primary">
-									<h4>Adidas Prophere</h4>
-									<p>short descript ...</p>
-									<div class="card-button">
-										<div class="w-50">
-											<button class="btn-primary" href="#">Buy now</button>
-										</div>
-										<div class="w-50">
-											<div
-												class="btn-price d-flex justify-content-center align-items-center"
-											>
-												<span class="priceText">123$</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-12 col-lg-4">
-							<div class="pro-card-primary">
-								<img src="./img/image 5.png" alt="" />
-								<div class="card-text-primary">
-									<h4>Adidas Prophere</h4>
-									<p>short descript ...</p>
-									<div class="card-button">
-										<div class="w-50">
-											<button class="btn-primary" href="#">Buy now</button>
-										</div>
-										<div class="w-50">
-											<div
-												class="btn-price d-flex justify-content-center align-items-center"
-											>
-												<span class="priceText">123$</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-12 col-lg-4">
-							<div class="pro-card-primary">
-								<img src="./img/image 5.png" alt="" />
-								<div class="card-text-primary">
-									<h4>Adidas Prophere</h4>
-									<p>short descript ...</p>
-									<div class="card-button">
-										<div class="w-50">
-											<button class="btn-primary" href="#">Buy now</button>
-										</div>
-										<div class="w-50">
-											<div
-												class="btn-price d-flex justify-content-center align-items-center"
-											>
-												<span class="priceText">123$</span>
-											</div>
-										</div>
-									</div>
+							<div class="col-12 col-md-4 mb-md-0 mb-4 border-left">
+								<h2 class="footer-heading">REGISTER</h2>
+								<span class="footer-review"
+									>Create one account to mange everything you do with Nike, from
+									your shopping preferences to your Nike+ activity</span
+								>
+								<div class="footer-more">
+									<a href="#">Learn more</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</section>
-			<!-- Product Feature ends -->
+				<div class="footer-bottom">
+					<div class="medium-container">
+						<div class="row">
+							<div class="col-12 col-md-4 mb-md-0 mb-4">
+								<h2 class="footer-heading">EMAIL SIGN UP</h2>
+								<span class="footer-review"
+									>Be the first to know about new products and special
+									offers</span
+								>
+								<div class="footer-more">
+									<a href="#">Sign up now</a>
+								</div>
+							</div>
+							<div class="col-12 col-md-4 mb-md-0 mb-4 border-left">
+								<h2 class="footer-heading">GIFT CARDS</h2>
+								<span class="footer-review"
+									>Give the gift that always first</span
+								>
+								<div class="footer-more">
+									<a href="#">View cards</a>
+								</div>
+							</div>
+							<div class="col-12 col-md-4 mb-md-0 mb-4 border-left">
+								<h2 class="footer-heading">STORES NEAR YOU</h2>
+								<span class="footer-review"
+									>Locate a Nike retail store or authorized retailer</span
+								>
+								<div class="footer-more">
+									<a href="#">Search</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- Footer ends -->
 			<!-- Back to top starts -->
 			<a href="#" class="back-to-top cd-top text-replace js-cd-top">
 				<i class="fa fa-arrow-up"></i>
@@ -342,10 +295,12 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		></script>
+		<!-- FancyBox -->
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 		<!-- Back to Top -->
 		<script src="./js/util.js"></script>
 		<script src="./js/main.js"></script>
 		<!-- MY SCRIPT -->
-		<script src="./js/Controller/main.js"></script>
+		<script src="./Controller/index.js"></script>
 	</body>
 </html>
