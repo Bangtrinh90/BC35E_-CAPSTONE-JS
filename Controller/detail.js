@@ -1,3 +1,26 @@
+const handelIncrease = () => {
+	var value = Number.parseInt(
+		document.querySelector('.profile-numb').innerHTML,
+		10,
+	);
+	value = isNaN(value) ? 0 : value;
+	value++;
+	document.querySelector('.profile-numb').innerHTML = value;
+};
+const handelDecrease = () => {
+	var value = Number.parseInt(
+		document.querySelector('.profile-numb').innerHTML,
+		10,
+	);
+	value = isNaN(value) ? 0 : value;
+	if (value <= 0) {
+		value = 0;
+	} else {
+		value--;
+	}
+	document.querySelector('.profile-numb').innerHTML = value;
+};
+
 window.onload = () => {
 	// Get param form url
 	const urlParam = new URLSearchParams(window.location.search);
@@ -43,17 +66,19 @@ window.onload = () => {
           <span class="profile-price">${price}$</span>
           <div class="profile-addOrRemove">
             <button
-              class="btn btn-info mr-2"
+              type="button"
+              class="btn btn-info mr-2 increase"
               style="font-size: 15px"
-              id="btnIncrease"
+              onclick="handelIncrease()"
             >
               +
             </button>
             <span class="profile-numb">0</span>
             <button
-              class="btn btn-info ml-2"
+              type="button"
+              class="btn btn-info ml-2 decrease"
               style="font-size: 15px"
-              id="btnDecrease"
+              onclick="handelDecrease()"
             >
               -
             </button>
@@ -65,4 +90,59 @@ window.onload = () => {
 		.catch(err => {
 			console.log(err);
 		});
+	// Render list product
+	let content = '';
+	const listProduct = JSON.parse(localStorage.getItem('product'));
+	// Filter product feature
+	const productListClone = [...listProduct];
+	const productFeature = productListClone.filter(
+		item => item.id !== Number(param),
+	);
+	content = productFeature
+		.map(item => {
+			let { id, name, description, shortDescription, image, price } = item;
+			return `
+        <div class="col-12 col-lg-4">
+          <div class="pro-card-primary">
+            <a
+              data-fancybox="gallery"
+              data-src=${image}
+              data-caption='${description}'
+            >
+              <img src=${image} alt="" />
+            </a>
+            <div class="card-text-primary">
+              <h4>${name}</h4>
+              <p>${
+								shortDescription.length > 40
+									? shortDescription.substr(0, 40) + '...'
+									: shortDescription
+							}</p>
+              <div class="card-button">
+                <div
+                  class="w-50 d-flex justify-content-center align-items-center"
+                >
+                  <a
+                    class="btn-buy d-flex justify-content-center align-items-center"
+                    href="./details.html?product_id=${id}"
+                  >
+                    <span>Buy now</span>
+                  </a>
+                </div>
+                <div class="w-50">
+                  <div
+                    class="btn-price d-flex justify-content-center align-items-center"
+                  >
+                    <span class="priceText">${price}$</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+				</div>
+      `;
+		})
+		.join('');
+	document.getElementById('proFeature').innerHTML = content;
+	//
 };
