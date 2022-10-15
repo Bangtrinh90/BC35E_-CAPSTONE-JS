@@ -20,6 +20,91 @@ const handelDecrease = () => {
 	}
 	document.querySelector('.profile-numb').innerHTML = value;
 };
+const handelClick = idx => {
+	const eleSize = document.querySelectorAll('.profile-size-item');
+	for (let i = 0; i < eleSize.length; i++) {
+		eleSize[i].className = 'profile-size-item';
+		if (i === +idx) {
+			eleSize[i].className = 'profile-size-item active';
+			sizeProds = eleSize[i].textContent;
+		}
+	}
+};
+// generate id
+const uid = function () {
+	return Date.now().toString(36) + Math.random().toString(36).substr(2);
+};
+
+// Add product to cart
+const addToCart = param => {
+	const eleSize = document.querySelectorAll('.profile-size-item.active');
+	const amount = +document.querySelector('.profile-numb').textContent;
+	if (amount <= 0) {
+		Swal.fire({
+			position: 'center',
+			icon: 'error',
+			title: 'Vui lòng nhập số lượng',
+			showConfirmButton: false,
+			timer: 1500,
+		});
+	} else {
+		if (eleSize.length !== 0) {
+			let size = eleSize[0].textContent;
+			const URL_ID = `https://shop.cyberlearn.vn/api/Product/getbyid?id=${param}`;
+			axios({
+				url: URL_ID,
+				method: 'GET',
+			})
+				.then(res => {
+					const product = res.data.content;
+					let { id, name, image, price } = product;
+					let cart = [];
+					const productItem = {
+						id,
+						name,
+						image,
+						price,
+						amount: amount,
+						size: size,
+					};
+					// const idx = cart.findIndex(item => item.id === id);
+					// if (idx !== 1) {
+					// 	cart.push(productItem);
+					// }
+					// console.log(cart);
+
+					// let listProductItem = JSON.parse(localStorage.getItem('cart'));
+					// if (listProductItem.length === 0) {
+					// 	cart.push(productItem);
+					// 	localStorage.setItem('cart', JSON.stringify(cart));
+					// } else {
+					// 	let cloneProduct = [...listProductItem];
+					// 	cloneProduct.forEach(item => {
+					// 		if (item.id !== id) {
+					// 			cloneProduct.push(productItem);
+					// 			localStorage.setItem('cart', JSON.stringify(cloneProduct));
+					// 		}
+					// 	});
+					// }
+
+					// document.querySelector(
+					// 	'.amount-product',
+					// ).innerHTML = `(${productItem.amount})`;
+				})
+				.catch(err => {
+					console.log(err);
+				});
+		} else {
+			Swal.fire({
+				position: 'center',
+				icon: 'error',
+				title: 'Vui lòng chọn size giày',
+				showConfirmButton: false,
+				timer: 1500,
+			});
+		}
+	}
+};
 
 window.onload = () => {
 	// Get param form url
@@ -56,9 +141,9 @@ window.onload = () => {
           <span class="profile-titleSize text-success">Available size</span>
           <ul class="profile-size d-flex align-items-center">
             ${size
-							.map(item => {
+							.map((item, idx) => {
 								return `
-                  <li class="profile-size-item">${item}</li>
+                  <li class="profile-size-item" onclick="handelClick('${idx}')">${item}</li>
                 `;
 							})
 							.join('')}
@@ -83,7 +168,7 @@ window.onload = () => {
               -
             </button>
           </div>
-          <button class="btn-detail" id="btnAddProd">Add to cart</button>
+          <button class="btn-detail" id="btnAddProd" onclick="addToCart('${param}')">Add to cart</button>
 				</div>
       `;
 		})
@@ -144,5 +229,5 @@ window.onload = () => {
 		})
 		.join('');
 	document.getElementById('proFeature').innerHTML = content;
-	//
+	// get info product add to cart
 };

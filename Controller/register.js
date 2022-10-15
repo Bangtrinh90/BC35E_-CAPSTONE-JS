@@ -72,7 +72,6 @@ document.getElementById('btnSubmit').addEventListener('click', e => {
 	e.preventDefault();
 	// Get value
 	const customer = getValueInput();
-	console.log(customer);
 	if (customer) {
 		const formList = document.querySelectorAll('form');
 		formList.forEach(item => {
@@ -80,23 +79,23 @@ document.getElementById('btnSubmit').addEventListener('click', e => {
 				item.reset();
 			}, 3000);
 		});
+		axios({
+			url: 'https://shop.cyberlearn.vn/api/Users/signup',
+			method: 'POST',
+			data: customer,
+		})
+			.then(res => {
+				Swal.fire({
+					position: 'center',
+					icon: 'success',
+					title: 'Đăng ký thành công',
+					showConfirmButton: false,
+					timer: 1500,
+				});
+			})
+			.catch(err => {
+				console.log(err);
+			});
 	}
 	// Using methods post add customer
-	axios({
-		url: 'https://shop.cyberlearn.vn/api/Users/signup',
-		method: 'POST',
-		data: customer,
-	})
-		.then(res => {
-			Swal.fire({
-				position: 'center',
-				icon: 'success',
-				title: 'Đăng ký thành công',
-				showConfirmButton: false,
-				timer: 1500,
-			});
-		})
-		.catch(err => {
-			console.log(err);
-		});
 });
