@@ -87,51 +87,83 @@
 					</div>
 					<div class="regInner">
 						<div class="regItem">
-							<div class="itemInner">
-								<input type="text" placeholder="email" />
+							<form class="itemInner">
+								<input type="text" placeholder="email" id="email" />
 								<div class="inputAlert">(*)</div>
-							</div>
-							<div class="itemInner">
-								<input placeholder="password" />
+							</form>
+							<div
+								style="display: none"
+								class="text-danger"
+								id="errorEmail"
+							></div>
+							<form class="itemInner">
+								<input type="password" placeholder="password" id="password" />
 								<div class="inputAlert">(*)</div>
-							</div>
-							<div class="itemInner">
-								<input placeholder="password confirm" />
+							</form>
+							<div
+								style="display: none"
+								class="text-danger"
+								id="errorPassword"
+							></div>
+							<form class="itemInner">
+								<input
+									type="password"
+									placeholder="password confirm"
+									id="re-password"
+								/>
 								<div class="inputAlert">(*)</div>
-							</div>
+							</form>
+							<div
+								style="display: none"
+								class="text-danger"
+								id="errorRePass"
+							></div>
 						</div>
 						<div class="regItem">
-							<div class="itemInner">
-								<input type="text" placeholder="name" />
+							<form class="itemInner">
+								<input type="text" placeholder="name" id="name" />
 								<div class="inputAlert">(*)</div>
-							</div>
-							<div class="itemInner">
-								<input type="number" placeholder="phone" />
+							</form>
+							<div
+								style="display: none"
+								class="text-danger"
+								id="errorName"
+							></div>
+							<form class="itemInner">
+								<input type="number" placeholder="phone" id="phone" />
 								<div class="inputAlert">(*)</div>
-							</div>
-							<div class="itemGender">
+							</form>
+							<div
+								style="display: none"
+								class="text-danger"
+								id="errorPhone"
+							></div>
+							<form class="itemGender mt-4">
 								<div class="gender-title mr-4">
 									<span class="gender-title-text">Gender</span>
 								</div>
 								<input
 									type="radio"
 									id="male"
+									value="male"
 									class="radio-input"
 									name="gender"
+									checked
 								/>
 								<label for="male" class="radio-label"></label>
 								<span class="radio-male">Male</span>
 								<input
 									type="radio"
 									id="fmale"
+									value="female"
 									class="radio-input"
 									name="gender"
 								/>
 								<label for="fmale" class="radio-label"></label>
 								<span class="radio-female">Female</span>
-							</div>
+							</form>
 							<div class="itemButton">
-								<button class="reg-button">Submit</button>
+								<button class="reg-button" id="btnSubmit">Submit</button>
 							</div>
 						</div>
 					</div>
@@ -236,9 +268,26 @@
 			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 			crossorigin="anonymous"
 		></script>
+		<!-- Axios -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js"
+			integrity="sha512-bHeT+z+n8rh9CKrSrbyfbINxu7gsBmSHlDCb3gUF1BjmjDzKhoKspyB71k0CIRBSjE5IVQiMMVBgCWjF60qsvA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
 		<!-- Back to Top -->
 		<script src="./js/util.js"></script>
 		<script src="./js/main.js"></script>
+		<!-- sweetalert2 -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.5.1/sweetalert2.min.js"
+			integrity="sha512-MV9Mmx+DfPYZTCXTkQhNUq2EWuAUU/fAm/HPYdEekvJr1W0Ko7RgdwFpOVG/vZXyQRKI+Ojxp/Un8xAe61oaiA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
 		<!-- MY SCRIPT -->
+		<script src="./Model/Customer.js"></script>
+		<script src="./Model/Validation.js"></script>
+		<script src="./Controller/register.js"></script>
 	</body>
 </html>
