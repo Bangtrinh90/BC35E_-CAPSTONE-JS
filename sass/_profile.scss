@@ -39,6 +39,15 @@
 	&-size {
 		margin-bottom: 17px;
 		margin-top: 15px;
+		@media (max-width: 568px) {
+			display: flex;
+			flex-direction: column!important;
+		}
+		@media (min-width: 768px) {
+			display: flex;
+			flex-direction: column!important;
+		}
+		
 		&-item {
 			cursor: pointer;
 			padding: 8px 11px;
@@ -48,6 +57,7 @@
 			font-weight: 600;
 			font-size: 22px;
 			color: #1e1d1d;
+			
 			&.active {
 				border: 2px solid;
 				border-image: linear-gradient(45deg, rgba(62, 32, 248, 0.9), #d017ee) 1;
