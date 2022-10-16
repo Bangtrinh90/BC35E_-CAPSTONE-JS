@@ -344,7 +344,11 @@ body {
 .hero {
   position: relative;
   background-color: #f5f5f5;
-  padding: 120px 0px 130px 0px;
+  padding: 120px 0px 150px 0px;
+  background-image: url("../img/image 6 (1).png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 
 .work {
@@ -484,6 +488,7 @@ body {
   line-height: 29px;
   margin-bottom: 8px;
   color: #000000;
+  min-height: 58px;
 }
 .pro-card-primary .card-text-primary p {
   font-size: 17px;
@@ -574,13 +579,14 @@ body {
 .profile-size {
   margin-bottom: 17px;
   margin-top: 15px;
+  width: 100%;
+  gap: 5px;
 }
 .profile-size-item {
   cursor: pointer;
   padding: 8px 11px;
   color: #000000;
   background: #cccccc;
-  margin-right: 20px;
   font-weight: 600;
   font-size: 22px;
   color: #1e1d1d;

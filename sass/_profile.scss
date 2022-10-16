@@ -39,21 +39,14 @@
 	&-size {
 		margin-bottom: 17px;
 		margin-top: 15px;
-		@media (max-width: 568px) {
-			display: flex;
-			flex-direction: column!important;
-		}
-		@media (min-width: 768px) {
-			display: flex;
-			flex-direction: column!important;
-		}
-		
+		width: 100%;	
+		gap: 5px;
+				
 		&-item {
 			cursor: pointer;
 			padding: 8px 11px;
 			color: #000000;
 			background: #cccccc;
-			margin-right: 20px;
 			font-weight: 600;
 			font-size: 22px;
 			color: #1e1d1d;
