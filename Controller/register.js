@@ -15,6 +15,12 @@ const getValueInput = () => {
 	isValid &=
 		validation.hasEmptyInput(_email, 'errorEmail', `Vui lòng nhập email`) &&
 		validation.checkEmail(_email, 'errorEmail', `Email không đúng định dạng`);
+	// validation.checkEmailExits(
+	// 	_email,
+	// 	'errorEmail',
+	// 	'Email đã được sử dụng',
+	// 	JSON.parse(localStorage.getItem('user')),
+	// );
 	// Validation phone
 	isValid &=
 		validation.hasEmptyInput(
@@ -72,6 +78,7 @@ document.getElementById('btnSubmit').addEventListener('click', e => {
 	e.preventDefault();
 	// Get value
 	const customer = getValueInput();
+
 	if (customer) {
 		const formList = document.querySelectorAll('form');
 		formList.forEach(item => {
@@ -79,6 +86,7 @@ document.getElementById('btnSubmit').addEventListener('click', e => {
 				item.reset();
 			}, 3000);
 		});
+		// localStorage.setItem('userList', JSON.stringify(customer));
 		axios({
 			url: 'https://shop.cyberlearn.vn/api/Users/signup',
 			method: 'POST',
@@ -99,3 +107,12 @@ document.getElementById('btnSubmit').addEventListener('click', e => {
 	}
 	// Using methods post add customer
 });
+if (!localStorage.getItem('cart')) {
+	document.querySelector('.amount-product').innerHTML = '(0)';
+} else {
+	const cartProd = JSON.parse(localStorage.getItem('cart'));
+	let amountProd = cartProd.reduce((total, item) => {
+		return (total += item.amount);
+	}, 0);
+	document.querySelector('.amount-product').innerHTML = `(${amountProd})`;
+}

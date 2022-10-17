@@ -14,7 +14,9 @@ const callAPI = async () => {
 			console.log(err);
 		});
 };
+
 // Render product list
+
 (async promise => {
 	try {
 		await promise.then(data => {
@@ -64,3 +66,15 @@ const callAPI = async () => {
 		console.log(error);
 	}
 })(callAPI());
+
+window.onload = () => {
+	if (!localStorage.getItem('cart')) {
+		document.querySelector('.amount-product').innerHTML = '(0)';
+	} else {
+		const cartProd = JSON.parse(localStorage.getItem('cart'));
+		let amountProd = cartProd.reduce((total, item) => {
+			return (total += item.amount);
+		}, 0);
+		document.querySelector('.amount-product').innerHTML = `(${amountProd})`;
+	}
+};
