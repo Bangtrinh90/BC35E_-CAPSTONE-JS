@@ -580,7 +580,12 @@ body {
   margin-bottom: 17px;
   margin-top: 15px;
   width: 100%;
-  gap: 5px;
+  gap: 10px;
+}
+@media (max-width: 768px) {
+  .profile-size {
+    flex-wrap: wrap;
+  }
 }
 .profile-size-item {
   cursor: pointer;

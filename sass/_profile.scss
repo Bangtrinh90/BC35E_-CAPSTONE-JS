@@ -40,8 +40,10 @@
 		margin-bottom: 17px;
 		margin-top: 15px;
 		width: 100%;	
-		gap: 5px;
-				
+		gap: 10px;
+		@media (max-width: 768px) {			
+			  flex-wrap: wrap;
+			}	
 		&-item {
 			cursor: pointer;
 			padding: 8px 11px;
